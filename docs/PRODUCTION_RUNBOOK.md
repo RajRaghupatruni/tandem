@@ -250,7 +250,7 @@ alembic current
 alembic check
 ```
 
-The expected head is `0015_rls_helper_role`. Never run migrations from FastAPI lifespan,
+The V1 final migration head is `0016_v1_completion`. Never run migrations from FastAPI lifespan,
 and never point `MIGRATION_DATABASE_URL` at the runtime role. Schema downgrades are not a routine
 rollback: future migrations may be destructive and application code is not necessarily backward
 compatible. For a bad application image, redeploy the previous image/commit without downgrading.
